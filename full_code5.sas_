@@ -1,0 +1,112 @@
+
+
+Proc sql;
+Title "Analysis of indivudual state Total_taxes 2015";
+Create Table Percentage_taxheads  as
+select area_name,property_percentage,Income_percentage,license_percentage,
+       SG_percentage,Other_percentage
+    from
+       (select area_name,
+       (propertytaes/totaltaxes*100) as property_percentage format=20.2 "Property percentage",
+       (Incometaxes/Totaltaxes*100) as Income_percentage format=20.2 "Income percentage",
+       (Licensetaxes/Totaltaxes*100) as license_percentage format=20.2 "license percentage",
+	   (Salesandgrossreceiptstaxes/Totaltaxes*100) as SG_percentage format=20.2 "SG percentage",
+       (Othertaxes/Totaltaxes*100) as Other_percentage format=20.2 "Other percentage"
+From p.Tax_2015 as a) as b;
+quit;
+Title;
+
+ /*Proc sql;
+ create table p.in state_max contributions
+ 
+ 
+ 
+ 
+ proc sql;
+ 
+ select distinct a.area_name,property_max,Income_max,License_max,SG_max,other_max
+ from
+      (select b.area_name,
+      			 max(property_percentage) as property_max,
+        		 max(Income_percentage) as Income_max,
+        		 max(license_percentage) as License_max ,
+        		 max(SG_percentage) as SG_max,
+      			 max(Other_percentage) as other_max
+       From p.percentage as b
+       having property_percentage = max(property_percentage)
+              or Income_percentage = max(Income_percentage)
+               or license_percentage = max(license_percentage)
+               or SG_percentage= max(SG_percentage)
+               or Other_percentage = max(Other_percentage))as sub,
+            p.tax_2015 as a
+        where a.area_name = sub.area_name
+        group by a.area_name
+        
+       ;
+ quit;
+      
+(select b.area_name,
+      			 max(property_percentage) as property_max,
+        		 max(Income_percentage) as Income_max,
+        		 max(license_percentage) as License_max ,
+        		 max(SG_percentage) as SG_max,
+      			 max(Other_percentage) as other_max
+       From p.percentage as b
+       having Income_percentage = max(income_percentage)
+         ) as subone,*/
+        
+ 
+ 
+ proc sql;
+ create table contributionlevels_statewise 
+ 			  (area_name char format=$35.,property_percentage num format=20.5,
+ 			   Property_level num format=20.5,income_percentage num format=20.5,
+ 			   Income_level char format=$20.,license_percentage num format=20.5,
+ 			   license_level char format=$20.,SG_percentage num format=20.5,
+ 			   SG_level char format=$20.,other_percentage num format=20.5,
+ 			   Other_level char format=$20.);
+ 
+ 
+ proc sql;
+ insert into contributionlevels_statewise
+ select area_name format=$35., property_percentage format=20.4,
+          case 
+           when property_percentage =. then "missing"
+           when property_percentage >0 and property_percentage<29 then "low"
+           when property_percentage>29 and property_percentage<49 then "medium"
+           when property_percentage>49  then "high"
+           else "N/A"
+           end as percentage_level,
+ 		income_percentage,
+ 		case 
+ 		   when Income_percentage >0 and income_percentage<30 then "low"
+           when income_percentage>30 and income_percentage<50 then "medium"
+           when income_percentage>50  then "high"
+           else "N/A"
+           end as income_level,
+ 		License_percentage,
+ 		   case 
+ 		   when License_percentage >0 and License_percentage<30 then "low"
+           when License_percentage>30 and License_percentage<50 then "medium"
+           when License_percentage>50  then "high"
+           else "N/A"
+           end as License_level,
+ 		 SG_percentage,
+ 		   case 
+ 		   when SG_percentage >0 and SG_percentage<30 then "low"
+           when SG_percentage>30 and SG_percentage<50 then "medium"
+           when SG_percentage>50  then "high"
+           else "N/A"
+           end as SG_level,
+ 		  Other_percentage,
+ 		   case 
+ 		   when Other_percentage >0 and Other_percentage<30 then "low"
+           when Other_percentage>30 and Other_percentage<50 then "medium"
+           when Other_percentage>50  then "high"
+           else "N/A"
+           end as Other_level
+          from p.percentage;
+          
+          
+          
+ quit;
