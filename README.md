@@ -4,9 +4,8 @@ The data collected  has been uploaded into SAS studio, "import data" option is u
 
 **METHODOLOGY**:
 
- >-The data file is provided as CSV file, which has been imported into SAS studio. The following methodologies were used in the analysis to create reports.
- 
- >-PROC IMPORT, to import the data and convert the CSV file to SAS datasets.
+ <li>The data file is provided as CSV file, which has been imported into SAS studio. The following methodologies were used in the analysis to create reports.<li>
+ <li>PROC IMPORT, to import the data and convert the CSV file to SAS datasets.<li>
  >-DICTIONARY.COLUMNS is used to see the contents of the data for further analysis.
  >-Tables were combined using INNER JOIN and sub query steps for further analysis.
  >-CASE Expressions were used to define the data into different levels using conditions for easy understanding.
