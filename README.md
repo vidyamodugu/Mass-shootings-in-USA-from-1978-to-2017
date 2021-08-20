@@ -14,7 +14,7 @@ The data collected  has been uploaded into SAS studio, "import data" option is u
  <li>MACRO definitions using %MACRO and %MEND was created to save the SAS steps and SAS steps which is repeated like PROC print step or PROC SQL steps for reducing       redundancy and increasing efficiency and computational time.
   
 **REPORTS DESCRIPTION**
->-Different reports were produced combining the datasets using PROC SQL joins and tables were created to save and retrieve the data for further analysis. Further Macros variables, functions and programs were created to automate the data in the process of creating reports for every year of mass shootings. 
+Different reports were produced combining the datasets using PROC SQL joins and tables were created to save and retrieve the data for further analysis. Further Macros variables, functions and programs were created to automate the data in the process of creating reports for every year of mass shootings. 
 
 **SQL DESCRIPTION**:
   
