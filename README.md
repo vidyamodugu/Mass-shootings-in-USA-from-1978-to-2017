@@ -4,20 +4,21 @@ The data collected  has been uploaded into SAS studio, "import data" option is u
 
 **METHODOLOGY**:
 
- <li>The data file is provided as CSV file, which has been imported into SAS studio. The following methodologies were used in the analysis to create reports.<li>
+ <li>The data file is provided as CSV file, which has been imported into SAS studio. The following methodologies were used in the analysis to create reports.
  <li>PROC IMPORT, to import the data and convert the CSV file to SAS datasets.<li>
- >-DICTIONARY.COLUMNS is used to see the contents of the data for further analysis.
- >-Tables were combined using INNER JOIN and sub query steps for further analysis.
- >-CASE Expressions were used to define the data into different levels using conditions for easy understanding.
- >-CREATE TABLE is used to create new tables with the new columns created from the existing columns.
- >-MACRO variables global and local were used to substitute text in the code that is repeated for every year information.
- >-MACRO definitions using %MACRO and %MEND was created to save the SAS steps and SAS steps which is repeated like PROC print step or PROC SQL steps for reducing<BR>    redundancy and increasing efficiency and computational time.
+ <li>DICTIONARY.COLUMNS is used to see the contents of the data for further analysis.<li>
+ <li>Tables were combined using INNER JOIN and sub query steps for further analysis.<li>
+ <li>CASE Expressions were used to define the data into different levels using conditions for easy understanding.<li>
+ <li>CREATE TABLE is used to create new tables with the new columns created from the existing columns.<li>
+ <li>MACRO variables global and local were used to substitute text in the code that is repeated for every year information.<li>
+ <li>MACRO definitions using %MACRO and %MEND was created to save the SAS steps and SAS steps which is repeated like PROC print step or PROC SQL steps for reducing<BR>    redundancy and increasing efficiency and computational time.<li>
+  
 **REPORTS DESCRIPTION**
 >-Different reports were produced combining the datasets using PROC SQL joins and tables were created to save and retrieve the data for further analysis. Further Macros variables, functions and programs were created to automate the data in the process of creating reports for every year of mass shootings. 
 
 **SQL DESCRIPTION**:
- 	The Process of analysis starts with combining datasets using INNER JOIN, specifying the variables that are needed for the analysis from the two tables. PROC SQL step with summary function count has been used on dataset MG_VICTIMS, to count the number of victims per every year from 1982 to 2017. To continue with PROC SQL step with summary function count is used on dataset MG_YEAR, MG_STATE, to count the no of incidents per each year, to gives us a report of frequency of occurrence of incidents every year, to produces a report which has the information regarding number many incidents occurred in each state, to create columns that count number of weapons obtained legally and illegally, to create column that has count weather mass shooter has any mental conditions.  
-New columns were created using a summary function to produce the count of weapons obtained legally and illegally, count of male and female shooters and the information regarding whether the mass shooter has any previous mental condition. CREATE TABLE is used to create a new table called weapons which stores the count of different weapons used and no of weapons used in each incident by the mass shooter. A case expression is used to designate levels according to the weapons used by mass shooters for each incident.
+ >-The Process of analysis starts with combining datasets using INNER JOIN, specifying the variables that are needed for the analysis from the two tables. PROC SQL step with summary function count has been used on dataset MG_VICTIMS, to count the number of victims per every year from 1982 to 2017. To continue with PROC SQL step with summary function count is used on dataset MG_YEAR, MG_STATE, to count the no of incidents per each year, to gives us a report of frequency of occurrence of incidents every year, to produces a report which has the information regarding number many incidents occurred in each state, to create columns that count number of weapons obtained legally and illegally, to create column that has count weather mass shooter has any mental conditions.  
+>-New columns were created using a summary function to produce the count of weapons obtained legally and illegally, count of male and female shooters and the information regarding whether the mass shooter has any previous mental condition. CREATE TABLE is used to create a new table called weapons which stores the count of different weapons used and no of weapons used in each incident by the mass shooter. A case expression is used to designate levels according to the weapons used by mass shooters for each incident.
 
 
 **MACROS DESCRIPTIONS**:
