@@ -29,7 +29,7 @@ New columns were created using a summary function to produce the count of weapon
 
 #**REQUIRMENTS**:
 >-**[SAS Studio](https://www.sas.com/en_ca/software/studio.html)**
->-**[SAS Enterprise Guide](https://support.sas.com/en/software/enterprise-guide-support.html)**
+*>-**[SAS Enterprise Guide](https://support.sas.com/en/software/enterprise-guide-support.html)**
 
 
 
