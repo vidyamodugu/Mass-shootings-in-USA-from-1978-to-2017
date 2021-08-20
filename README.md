@@ -17,17 +17,19 @@ Different reports were produced combining the datasets using PROC SQL joins and 
 **SQL DESCRIPTION**:
  	The Process of analysis starts with combining datasets using INNER JOIN, specifying the variables that are needed for the analysis from the two tables. PROC SQL step with summary function count has been used on dataset MG_VICTIMS, to count the number of victims per every year from 1982 to 2017. To continue with PROC SQL step with summary function count is used on dataset MG_YEAR, MG_STATE, to count the no of incidents per each year, to gives us a report of frequency of occurrence of incidents every year, to produces a report which has the information regarding number many incidents occurred in each state, to create columns that count number of weapons obtained legally and illegally, to create column that has count weather mass shooter has any mental conditions.  
 New columns were created using a summary function to produce the count of weapons obtained legally and illegally, count of male and female shooters and the information regarding whether the mass shooter has any previous mental condition. CREATE TABLE is used to create a new table called weapons which stores the count of different weapons used and no of weapons used in each incident by the mass shooter. A case expression is used to designate levels according to the weapons used by mass shooters for each incident.
+
+
 **MACROS DESCRIPTIONS**:
-To start with Macros variables were created to save the path of the files imported as text and then the text is substituted in the libname and filename statements to assign library.
-Automatic Macro variables &syslibrc, &syserr, &sysparm with the %put statement were used to check if the library is successfully assigned, they write value 0 to the SAS log if the library is successfully assigned and a value of 1 if the library assignment is failed. User-defined variables were created and saved to automate the PROC SQL steps. Macro definitions were created using %MACRO and %MEND statements for the SAS code that is repeated. For Example: creating a table that shows a total number of victims each year. System options like Mcompilenote = all is used, which writes the compilation information to the SAS log. To continue with, the macro definition is called is called along with positional parameters to create reports for each year from 1982 to 2017. Mprint system option is used along with the call, which displays the code that is sent for compiling in the log and the sas statements displayed by macro execution.
-To decrease the number of macros functions or to limit the number of the macro functions %if %then statement and %do loop is used to write complete and partial SAS steps on conditions along with If then clauses. MLOGIC system option is used while calling a macro function which writes to SAS log the information about macros resolved during execution. Mlogic option identifies the macro execution path, which helps us to debug the problem.
+>-To start with Macros variables were created to save the path of the files imported as text and then the text is substituted in the libname and filename statements to assign library.
+>-Automatic Macro variables &syslibrc, &syserr, &sysparm with the %put statement were used to check if the library is successfully assigned, they write value 0 to the SAS log if the library is successfully assigned and a value of 1 if the library assignment is failed. User-defined variables were created and saved to automate the PROC SQL steps. Macro definitions were created using %MACRO and %MEND statements for the SAS code that is repeated. For Example: creating a table that shows a total number of victims each year. System options like Mcompilenote = all is used, which writes the compilation information to the SAS log. To continue with, the macro definition is called is called along with positional parameters to create reports for each year from 1982 to 2017. Mprint system option is used along with the call, which displays the code that is sent for compiling in the log and the sas statements displayed by macro execution.
+>-To decrease the number of macros functions or to limit the number of the macro functions %if %then statement and %do loop is used to write complete and partial SAS steps on conditions along with If then clauses. MLOGIC system option is used while calling a macro function which writes to SAS log the information about macros resolved during execution. Mlogic option identifies the macro execution path, which helps us to debug the problem.
 
-**ENVIRONMENT**:
-**[SAS On Demand](https://www.sas.com/en_ca/curiosity.html?utm_source=google&utm_medium=cpc&utm_campaign=brand-global&utm_content=GMS-158646-gbc-cf&gclid=Cj0KCQjwpf2IBhDkARIsAGVo0D1Chh8BouufuF3t0xMFH_H3XM-W8YkwGYCBOAOFJ9YlsjZylhcDl5UaAmcUEALw_wcB)**
+#**ENVIRONMENT**:
+>-**[SAS On Demand](https://www.sas.com/en_ca/curiosity.html?utm_source=google&utm_medium=cpc&utm_campaign=brand-global&utm_content=GMS-158646-gbc-cf&gclid=Cj0KCQjwpf2IBhDkARIsAGVo0D1Chh8BouufuF3t0xMFH_H3XM-W8YkwGYCBOAOFJ9YlsjZylhcDl5UaAmcUEALw_wcB)**
 
-**REQUIRMENTS**:
-**[SAS Studio](https://www.sas.com/en_ca/software/studio.html)**
-**[SAS Enterprise Guide](https://support.sas.com/en/software/enterprise-guide-support.html)**
+#**REQUIRMENTS**:
+>-**[SAS Studio](https://www.sas.com/en_ca/software/studio.html)**
+>-**[SAS Enterprise Guide](https://support.sas.com/en/software/enterprise-guide-support.html)**
 
 
 
