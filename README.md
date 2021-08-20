@@ -25,10 +25,10 @@ New columns were created using a summary function to produce the count of weapon
 >-To decrease the number of macros functions or to limit the number of the macro functions %if %then statement and %do loop is used to write complete and partial SAS steps on conditions along with If then clauses. MLOGIC system option is used while calling a macro function which writes to SAS log the information about macros resolved during execution. Mlogic option identifies the macro execution path, which helps us to debug the problem.
 
 #**ENVIRONMENT**:
->-**[SAS On Demand](https://www.sas.com/en_ca/curiosity.html?utm_source=google&utm_medium=cpc&utm_campaign=brand-global&utm_content=GMS-158646-gbc-cf&gclid=Cj0KCQjwpf2IBhDkARIsAGVo0D1Chh8BouufuF3t0xMFH_H3XM-W8YkwGYCBOAOFJ9YlsjZylhcDl5UaAmcUEALw_wcB)**
+* **[SAS On Demand](https://www.sas.com/en_ca/curiosity.html?utm_source=google&utm_medium=cpc&utm_campaign=brand-global&utm_content=GMS-158646-gbc-cf&gclid=Cj0KCQjwpf2IBhDkARIsAGVo0D1Chh8BouufuF3t0xMFH_H3XM-W8YkwGYCBOAOFJ9YlsjZylhcDl5UaAmcUEALw_wcB)**
 
 #**REQUIRMENTS**:
->-**[SAS Studio](https://www.sas.com/en_ca/software/studio.html)**
+* **[SAS Studio](https://www.sas.com/en_ca/software/studio.html)**
 * **[SAS Enterprise Guide](https://support.sas.com/en/software/enterprise-guide-support.html)**
 
 
