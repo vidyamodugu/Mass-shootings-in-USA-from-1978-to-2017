@@ -2,7 +2,7 @@ This analysis provides comprehensive information regarding Mass Shootings from 1
 The data collected  has been uploaded into SAS studio, "import data" option is used to convert the datasets into SAS datasets for the analysis. This analysis uses "PROC SQL" steps to produce reports and "SAS Macros "to save the SQL steps and to repeat them as necessary for increased efficiency and flexibility.
 
 
-"**METHODOLOGY**:"
+#**METHODOLOGY**:
 The data file is provided as CSV file, which has been imported into SAS studio. The following methodologies were used in the analysis to create reports.
  1.PROC IMPORT, to import the data and convert the CSV file to SAS datasets.
  2.DICTIONARY.COLUMNS is used to see the contents of the data for further analysis.
