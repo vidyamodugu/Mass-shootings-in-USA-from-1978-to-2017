@@ -2,16 +2,16 @@ This analysis provides comprehensive information regarding Mass Shootings from 1
 The data collected  has been uploaded into SAS studio, "import data" option is used to convert the datasets into SAS datasets for the analysis. This analysis uses "PROC SQL" steps to produce reports and "SAS Macros "to save the SQL steps and to repeat them as necessary for increased efficiency and flexibility.
 
 
-<h1>**METHODOLOGY**:<h1>
-
- >-The data file is provided as CSV file, which has been imported into SAS studio. The following methodologies were used in the analysis to create reports.
- *PROC IMPORT, to import the data and convert the CSV file to SAS datasets.
- *DICTIONARY.COLUMNS is used to see the contents of the data for further analysis.
- *Tables were combined using INNER JOIN and sub query steps for further analysis.
- *CASE Expressions were used to define the data into different levels using conditions for easy understanding.
- *CREATE TABLE is used to create new tables with the new columns created from the existing columns.
- *MACRO variables global and local were used to substitute text in the code that is repeated for every year information.
- *MACRO definitions using %MACRO and %MEND was created to save the SAS steps and SAS steps which is repeated like PROC print step or PROC SQL steps for reducing   redundancy and increasing efficiency and computational time.
+**METHODOLOGY**:
+ ####The data file is provided as CSV file, which has been imported into SAS studio. The following methodologies were used in the analysis to create reports.
+ 
+ >-PROC IMPORT, to import the data and convert the CSV file to SAS datasets.
+ >-DICTIONARY.COLUMNS is used to see the contents of the data for further analysis.
+ >-Tables were combined using INNER JOIN and sub query steps for further analysis.
+ >-CASE Expressions were used to define the data into different levels using conditions for easy understanding.
+ >-CREATE TABLE is used to create new tables with the new columns created from the existing columns.
+ >-MACRO variables global and local were used to substitute text in the code that is repeated for every year information.
+ >-MACRO definitions using %MACRO and %MEND was created to save the SAS steps and SAS steps which is repeated like PROC print step or PROC SQL steps for reducing<BR>    redundancy and increasing efficiency and computational time.
 **REPORTS DESCRIPTION**
 >-Different reports were produced combining the datasets using PROC SQL joins and tables were created to save and retrieve the data for further analysis. Further Macros variables, functions and programs were created to automate the data in the process of creating reports for every year of mass shootings. 
 
