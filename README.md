@@ -11,7 +11,7 @@ The data collected  has been uploaded into SAS studio, "import data" option is u
  <li>CASE Expressions were used to define the data into different levels using conditions for easy understanding.
  <li>CREATE TABLE is used to create new tables with the new columns created from the existing columns.
  <li>MACRO variables global and local were used to substitute text in the code that is repeated for every year information.
- <li>MACRO definitions using %MACRO and %MEND was created to save the SAS steps and SAS steps which is repeated like PROC print step or PROC SQL steps for reducing redundancy and increasing efficiency and computational time.
+ <li>MACRO definitions using %MACRO and %MEND was created to save the SAS steps and SAS steps which is repeated like PROC print step or PROC SQL steps for reducing   redundancy and increasing efficiency and computational time.
   
 **REPORTS DESCRIPTION**
 >-Different reports were produced combining the datasets using PROC SQL joins and tables were created to save and retrieve the data for further analysis. Further Macros variables, functions and programs were created to automate the data in the process of creating reports for every year of mass shootings. 
