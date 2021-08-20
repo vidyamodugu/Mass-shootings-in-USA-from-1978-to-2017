@@ -23,7 +23,7 @@ Automatic Macro variables &syslibrc, &syserr, &sysparm with the %put statement w
 To decrease the number of macros functions or to limit the number of the macro functions %if %then statement and %do loop is used to write complete and partial SAS steps on conditions along with If then clauses. MLOGIC system option is used while calling a macro function which writes to SAS log the information about macros resolved during execution. Mlogic option identifies the macro execution path, which helps us to debug the problem.
 
 **ENVIRONMENT**:
-[SAS On Demand] (https://www.sas.com/en_ca/software/studio.html)
+**[SAS On Demand](https://www.sas.com/en_ca/software/studio.html)**
 
 **REQUIRMENTS**:
 <SAS Studio>
